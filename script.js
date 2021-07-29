@@ -83,10 +83,10 @@ function setup()
   pacManUp = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-up.png?v=1626464840140");
   pacManDown = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-down.png?v=1626464843374");
   pacManLeft = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-left.png?v=1626464841802");
-  pinkGhostRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FPinky%20(1).png?v=1626475038102"); 
-  pinkGhostLeft = loadImage("hhttps://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FPinky%20(2).png?v=1626475111582");
-  blueGhostRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky.png?v=1626475215111");
-  blueGhostLeft = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky%20(1)%20.png?v=1626475290188");
+//   pinkGhostRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FPinky%20(1).png?v=1626475038102"); 
+//   pinkGhostLeft = loadImage("hhttps://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FPinky%20(2).png?v=1626475111582");
+//   blueGhostRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky.png?v=1626475215111");
+//   blueGhostLeft = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky%20(1)%20.png?v=1626475290188");
 
   pacmanAvatar = pacManRight;
   score = 0;
@@ -95,8 +95,8 @@ function setup()
 function draw(){ // continuously draws the maze
   background(0);
   image(pacmanAvatar, pManCurrPosX, pManCurrPosY, 50, 50);
-  image(pinkGhostRight, pinkGhostPosX, pinkGhostPosY, 50, 50);
-  image(blueGhostLeft, blueGhostPosX, blueGhostPosY, 50, 50);
+//   image(pinkGhostRight, pinkGhostPosX, pinkGhostPosY, 50, 50);
+//   image(blueGhostLeft, blueGhostPosX, blueGhostPosY, 50, 50);
   drawMap(); 
   fill(255,100,100)
   rect(675,0,100,100)
