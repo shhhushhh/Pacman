@@ -3,9 +3,6 @@
  *    background, createCanvas, ellipse, noFill, stroke, strokeWeight, rect, image, loadImage, fill, colorMode, HSB, y, keyCode, pManCurrX, circle, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, LEFT_ARROW, pinkGhostRight
  */
 
-// Content behind double slashes is a comment. Use it for plain English notes,
-// or for code that you want to temporarily disable.
-
 let startingX;
 let startingY;
 
@@ -83,7 +80,7 @@ function setup()
   speedY = 10;
   
   wallColor = color(235, 100, 100);
-  pacManRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-right.png?v=1626464839930");
+  pacManRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-right.png?v=1626464839930"); // loads in Pacman/ghosts facing different directions
   pacManUp = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-up.png?v=1626464840140");
   pacManDown = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-down.png?v=1626464843374");
   pacManLeft = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2Fpacman-left.png?v=1626464841802");
@@ -91,10 +88,7 @@ function setup()
   pinkGhostLeft = loadImage("hhttps://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FPinky%20(2).png?v=1626475111582");
   blueGhostRight = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky.png?v=1626475215111");
   blueGhostLeft = loadImage("https://cdn.glitch.com/6ed26b30-fe55-4022-8423-cd86038b8441%2FBlinky%20(1)%20.png?v=1626475290188");
-  //wanna go on a jcall?
-  // yeah that'll work better than this lol 
-  //https://meet.google.com/mzj-nddr-njk?authuser=0 
-  //join the link above manroop are you still here?
+
   pacmanAvatar = pacManRight;
   score = 0;
 }
@@ -111,7 +105,7 @@ function draw(){ // continuously draws the maze
   
 }
 
-function drawMap(){
+function drawMap(){ // creates the maze
   for(let i = 0; i < world.length; i++) {
     for (let j = 0; j < world[0].length; j++) {
       if (world[i][j] == 0) {
@@ -130,7 +124,7 @@ function drawMap(){
   }
 }
 
-function drawScore() {
+function drawScore() { // displays the score
   if(score < 10){
     fill(100)
    .strokeWeight(0)
@@ -148,57 +142,7 @@ function drawScore() {
   text(score, 700, 80);
 }
 
-// function ghosts() {
-  
-// }
-/**
-* [UNTESTED FUNCTION]
-* Moves the pacman using a switch statment called direction with 5 modes: idle, left, up, down, right.
-* If the cell directly ahead of the pacman is a wall then it moves the state to idle
-**/
-function movePacman(){
-  var addX;
-  var addY;
-  var maxVelocity = 25;
-  if ((direction === DIRECTIONS.LEFT && (world[(pManCurrPosY)/50][((pManCurrPosX -50) /50)] === 0)) 
-     || (direction === DIRECTIONS.RIGHT && (world[(pManCurrPosY)/50][((pManCurrPosX + 50) /50)] === 0))
-     || (direction === DIRECTIONS.UP && (world[(pManCurrPosY - 50)/50][(pManCurrPosX/50)] === 0))
-     || (direction === DIRECTIONS.DOWN && (world[(pManCurrPosY + 50)/50][(pManCurrPosX/50)] === 0))) {
-    direction = DIRECTIONS.IDLE
-  }
-  switch (direction) {
-    case DIRECTIONS.IDLE:
-      addX = 0;
-      addY = 0;
-      break;
-    case DIRECTIONS.LEFT :
-      addX = -(maxVelocity);
-      addY = 0;
-      break;
-    case DIRECTIONS.RIGHT:
-      addX = (maxVelocity);
-      addY = 0;
-      break;
-    case DIRECTIONS.UP:
-      addX = 0;
-      addY = -(maxVelocity);
-      break;
-    case DIRECTIONS.DOWN:
-      addX = 0;
-      addY = (maxVelocity);
-      break;
-    default: 
-      addX = 0;
-      addY = 0;
-      break;
-      
-  }
-  pManCurrPosX += (addX);
-  pManCurrPosY += (addY);
-}
-
-
-function keyPressed()
+function keyPressed() // controls for Pacman and increases score each time Pacman moves onto a block with a coin
 {
   
   if(keyCode === DOWN_ARROW){
