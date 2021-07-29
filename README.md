@@ -1,4 +1,4 @@
-CSSI Day 1 - Olympic Rings
+CSSI Extension Friday Project: Pacman
 =================
 
 Your Project
@@ -6,20 +6,20 @@ Your Project
 
 ### ← README.md
 
-That's this file, where you can tell people what your cool website does and how you built it.
+Not much to say other than it's a scuffed version of Pacman :D I mainly worked on creating the world array, the drawMap() function, and implementing the coins.
 
 ### ← index.html
 
-Where you'll write the content of your website. 
+Focused mainly on exploring the p5 library in Javascript so not much emphasis was placed on html or css 
 
 ### ← style.css
 
-CSS files add styling rules to your content.
+See html
 
 ### ← script.js
 
-If you're feeling fancy you can add interactivity to your site with JavaScript.
+Utilized the p5 library in Javascript to create our version of Pacman! This was a timed project and we completed it in around 3 hours.
 
 ### ← assets
 
-Drag in `assets`, like images or music, to add them to your project
+There are several assets (including the ghosts which have not been implemented yet) included.
