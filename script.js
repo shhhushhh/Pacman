@@ -1,4 +1,3 @@
-// Name any p5.js functions we use in `global` so Glitch can recognize them.
 /* global
  *    background, createCanvas, ellipse, noFill, stroke, strokeWeight, rect, image, loadImage, fill, colorMode, HSB, y, keyCode, pManCurrX, circle, DOWN_ARROW, UP_ARROW, RIGHT_ARROW, LEFT_ARROW, pinkGhostRight
  */
