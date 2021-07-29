@@ -7,7 +7,7 @@ Your Project
 ### ← README.md
 
 Not much to say other than it's a scuffed version of Pacman :D I mainly worked on creating the world array, the drawMap() function, and implementing the coins.
-You can play the game on the Glitch IDE: https://glitch.com/edit/#!/pacman-sample
+You can play the game on the Glitch IDE: https://pacman-sample.glitch.me
 
 ### ← index.html
 
